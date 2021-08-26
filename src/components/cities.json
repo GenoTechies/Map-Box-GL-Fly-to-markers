@@ -1,0 +1,37 @@
+[
+  {
+    "city": "Kalutara, Sri Lanka",
+    "latitude": 6.585395,
+    "longitude": 79.960739
+  },
+  {
+    "city": "Negombo, Sri Lanka",
+    "latitude": 7.189464,
+    "longitude": 79.858734
+  },
+  {
+    "city": "Colombo, Sri Lanka",
+    "latitude": 6.927079,
+    "longitude": 79.861244
+  },
+  {
+    "city": "Kandy, Sri Lanka",
+    "latitude": 7.290572,
+    "longitude": 80.633728
+  },
+  {
+    "city": "Galle, Sri Lanka",
+    "latitude": 6.053519,
+    "longitude": 80.220978
+  },
+  {
+    "city": "Jaffna, Sri Lanka",
+    "latitude": 9.666664,
+    "longitude": 80.0
+  },
+  {
+    "city": "Trincomalee, Sri Lanka",
+    "latitude": 8.5666644,
+    "longitude": 81.2333324
+  }
+]
