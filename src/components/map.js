@@ -9,9 +9,9 @@ import MapGL, {
   FullscreenControl,
   FlyToInterpolator,
 } from "react-map-gl";
-import CityPin from "./city-pin";
+import CityPin from "./city-pin"; //pin
 import CityInfo from "./city-info";
-import Data from "./cities.json";
+import Data from "./cities.json"; //cities list
 
 class map extends React.Component {
   constructor(props) {
@@ -43,6 +43,7 @@ class map extends React.Component {
   };
   // the method to render the markers
   _renderCityMarker = (City, index) => {
+    // this function for render the red color markers
     console.log(City, "city");
     return (
       <Marker
@@ -57,7 +58,7 @@ class map extends React.Component {
       </Marker>
     );
   };
-  //zoom function for the auto complete
+  //zoom function after clicks the auto complete
   AutoCompletezoom(placeDetail) {
     console.log(Data[0], "dataa");
     if (placeDetail == null) {
@@ -71,13 +72,13 @@ class map extends React.Component {
         latitude: Plongitude,
         longitude: Platitude,
         zoom: 8,
-        transitionDuration: 500,
+        transitionDuration: 500, //zoom time duration
         transitionInterpolator: new FlyToInterpolator(),
         transitionEasing: d3.easeCubic,
       },
     });
   }
-  // method to render the Popup
+  // method to render the Popup after hover on markers
   _renderPopup() {
     const { popupInfo } = this.state;
     console.log("popup");
@@ -101,6 +102,7 @@ class map extends React.Component {
     var { viewport } = this.state;
 
     const fullscreenControlStyle = {
+      //styles for map view
       position: "absolute",
       top: 0,
       left: 0,
@@ -108,6 +110,7 @@ class map extends React.Component {
     };
 
     const navStyle = {
+      //styles for map view
       position: "absolute",
       top: 36,
       left: 0,
@@ -129,7 +132,7 @@ class map extends React.Component {
                 getOptionLabel={(option) => option.city}
                 onChange={(e, v) => {
                   this.AutoCompletezoom(v);
-                }}
+                }} //calling zoom function
                 renderInput={(params) => (
                   <TextField
                     {...params}
@@ -142,6 +145,7 @@ class map extends React.Component {
             <div className="mapContainer">
               <div>
                 <MapGL
+                  //map
                   {...viewport}
                   width="400px"
                   height="400px"
